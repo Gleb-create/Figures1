@@ -2,10 +2,10 @@ import turtle
 from time import *
 
 
-def drawSquare(myTurtle, x, y, size):
+def drawSquare(myTurtle, x, y, size,angle):
     myTurtle.penup()
     myTurtle.goto(x, y)
-    myTurtle.left(90)
+    myTurtle.left(angle)
     myTurtle.forward(size / 2)
     myTurtle.pendown()
     myTurtle.right(90)
@@ -23,5 +23,5 @@ def drawSquare(myTurtle, x, y, size):
 
 
 ada = turtle.Turtle()
-drawSquare(ada, 35, 35, 50)
+drawSquare(ada, 35, 35, 50,30)
 sleep(1000)
