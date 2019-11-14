@@ -2,12 +2,14 @@ import turtle
 from time import *
 
 
-def drawSquare(myTurtle, x, y, size,angle = 0):
+def drawSquare(myTurtle, x, y, size,myColor = "black",angle = 0):
     myTurtle.penup()
+    myTurtle.color(myColor)
     myTurtle.goto(x, y)
     myTurtle.setheading(90)
     myTurtle.left(angle)
     myTurtle.pendown()
+    myTurtle.begin_fill()
     myTurtle.right(90)
     myTurtle.forward(size)
     myTurtle.right(90)
@@ -17,13 +19,16 @@ def drawSquare(myTurtle, x, y, size,angle = 0):
     myTurtle.forward(size)
     myTurtle.right(90)
     myTurtle.forward(size)
+    myTurtle.end_fill()
 
-def drawTriangle(myTurtle,x,y,cathetus,angle = 0):
+def drawTriangle(myTurtle,x,y,cathetus,myColor = "black",angle = 0):
     hypothenuse = (cathetus**2 + cathetus**2)**0.5
     myTurtle.penup()
+    myTurtle.color(myColor)
     myTurtle.goto(x, y)
     myTurtle.setheading(90)
     myTurtle.pendown()
+    myTurtle.begin_fill()
     myTurtle.right(angle)
     myTurtle.right(45)
     myTurtle.forward(hypothenuse)
@@ -31,12 +36,15 @@ def drawTriangle(myTurtle,x,y,cathetus,angle = 0):
     myTurtle.forward(cathetus)
     myTurtle.right(90)
     myTurtle.forward(cathetus)
+    myTurtle.end_fill()
 
-def drawParallelogram(myTurtle,x,y,shortside,longside,angle = 0):
+def drawParallelogram(myTurtle,x,y,shortside,longside,myColor = "black",angle = 0):
     myTurtle.penup()
+    myTurtle.color(myColor)
     myTurtle.goto(x, y)
     myTurtle.setheading(90)
     myTurtle.pendown()
+    myTurtle.begin_fill()
     myTurtle.right(angle)
     myTurtle.right(45)
     myTurtle.forward(shortside)
@@ -46,10 +54,11 @@ def drawParallelogram(myTurtle,x,y,shortside,longside,angle = 0):
     myTurtle.forward(shortside)
     myTurtle.right(135)
     myTurtle.forward(longside)
+    myTurtle.end_fill()
 
 ada = turtle.Turtle()
-drawSquare(ada, 35, 35, 50,30)
-drawTriangle(ada,60,60,50)
-drawTriangle(ada,70,70,60)
-drawParallelogram(ada,50,50,30,60)
+drawSquare(ada, 35, 35, 50,"red")
+drawTriangle(ada,60,60,50,"yellow")
+drawTriangle(ada,70,70,60,"green")
+drawParallelogram(ada,50,50,30,60,"blue")
 sleep(1000)
