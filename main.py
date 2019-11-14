@@ -57,8 +57,8 @@ def drawParallelogram(myTurtle,x,y,shortside,longside,myColor = "black",angle = 
     myTurtle.end_fill()
 
 ada = turtle.Turtle()
-drawSquare(ada, 35, 35, 50,"red")
-drawTriangle(ada,60,60,50,"yellow")
-drawTriangle(ada,70,70,60,"green")
-drawParallelogram(ada,50,50,30,60,"blue")
+drawTriangle(ada,100,100,40,"orange",225)
+drawTriangle(ada,100,100,56,"orange",180)
+drawTriangle(ada,100,100,79,"orange",135)
+drawTriangle(ada,100,-11,79,"orange",135)
 sleep(1000)
