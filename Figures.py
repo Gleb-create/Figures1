@@ -1,7 +1,7 @@
 import turtle
 from time import *
 
-#print(myTurtle.pos())
+
 def drawSquare(myTurtle, x, y, size,myColor = "black",angle = 0):
     myTurtle.penup()
     myTurtle.color(myColor)
@@ -21,7 +21,7 @@ def drawSquare(myTurtle, x, y, size,myColor = "black",angle = 0):
     myTurtle.forward(size)
     myTurtle.end_fill()
 
-def drawTrianglefill(myTurtle,x,y,cathetus,myColor = "black",angle = 0):
+def drawTriangle(myTurtle,x,y,cathetus,myColor = "black",angle = 0):
     hypothenuse = (cathetus**2 + cathetus**2)**0.5
     myTurtle.penup()
     myTurtle.color(myColor)
@@ -37,22 +37,6 @@ def drawTrianglefill(myTurtle,x,y,cathetus,myColor = "black",angle = 0):
     myTurtle.right(90)
     myTurtle.forward(cathetus)
     myTurtle.end_fill()
-
-def drawTriangle(myTurtle,x,y,cathetus,myColor = "black",angle = 0):
-    hypothenuse = (cathetus**2 + cathetus**2)**0.5
-    myTurtle.penup()
-    myTurtle.color(myColor)
-    myTurtle.goto(x, y)
-    myTurtle.setheading(90)
-    myTurtle.pendown()
-    myTurtle.right(angle)
-    myTurtle.right(45)
-    myTurtle.forward(hypothenuse)
-    myTurtle.right(135)
-    myTurtle.forward(cathetus)
-    myTurtle.right(90)
-    myTurtle.forward(cathetus)
-
 
 def drawParallelogram(myTurtle,x,y,shortside,longside,myColor = "black",angle = 0):
     myTurtle.penup()
@@ -73,12 +57,8 @@ def drawParallelogram(myTurtle,x,y,shortside,longside,myColor = "black",angle = 
     myTurtle.end_fill()
 
 ada = turtle.Turtle()
-drawTrianglefill(ada,100,100,40,"orange",225)
-drawTrianglefill(ada,100,100,56,"orange",180)
-drawTrianglefill(ada,100,100,79,"orange",135)
-drawTriangle(ada,0,-111,100,"black",0)
-drawTrianglefill(ada,100,-111,56,"orange",180)
-drawTrianglefill(ada,44,-68,79,"orange",180+135)
-drawTrianglefill(ada,44,-167,56,"orange",0)
-
+drawTriangle(ada,100,100,40,"orange",225)
+drawTriangle(ada,100,100,56,"orange",180)
+drawTriangle(ada,100,100,79,"orange",135)
+drawTriangle(ada,100,-11,79,"orange",135)
 sleep(1000)
